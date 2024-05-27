@@ -1,50 +1,30 @@
-# Welcome to your Expo app 👋
+Cree un sistema que permita registrar en una BD la información de dos tablas (ud las elije pero deben ser de al menos 3 campos de diferente tipo) que se encuentran relacionadas entre si (por ejemplo bancos/clientes o libros/capítulos), el backend debe usar algún patron de diseño popular y usar las características del framework para el manejo de BDs. El frontend en react-native se comunica con este back para permitir registrar la información y mostrarla en una tabla o grilla (visual) que muestre la información de las dos tablas (de la BD). Cuando se termine me avisan cual es su usuario en github para darle acceso de escritura al repositorio y se sube como una rama con su nombre. El repositorio está en https://github.com/wilfredcom/PruebaKapli
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
-## Get started
+# Kapli test
+## _Desarrollo de una app con react native y un aplicacion backend con Laravel_
 
-1. Install dependencies
 
-   ```bash
-   npm install
-   ```
-
-2. Start the app
-
-   ```bash
-    npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+Clonamos el repositorio https://github.com/wilfredcom/PruebaKapli.git el cual contiene los dos proyectos
+1) la app en react native esta creada con el framework de expo
+2) el backend en Laravel en su version 11.0
+ 
+```sh
+    git clone https://github.com/wilfredcom/PruebaKapli.git 
+```
+ 
+```sh
+    cd appKapli && npm install
+    npm run web *para ejecutar la app
+```
+----------
+```sh
+  cd kapli-backend && composer install
+ //ejecutamos las migraciones y un seeder para llenar la bd con datos de pruebas
+ php artisan migrate
+ php artisan db:seed --class=BookSeeder
+ //ejecutamos el servidor
+ php artisan serve
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## la app se ejucuta en la web para poder usar el mismo localhost para la conexion con la api
