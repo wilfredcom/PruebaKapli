@@ -19,6 +19,8 @@ $ npm start
 ## Laravel app
 ```
 $ cd antman
+$ cp .env.example .env
+# configurar base de datos, nombre de la db, usuaro y contrasena
 $ composer install
 $ php artisan migrate
 $ php artisan make:seeder CategorySeeder 
