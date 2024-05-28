@@ -1,6 +1,6 @@
 ## React native app
 ```
-$ cd antmanapp
+$ cd app
 $ npm i
 
 # ios
