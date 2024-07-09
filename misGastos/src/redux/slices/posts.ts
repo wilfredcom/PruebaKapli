@@ -1,0 +1,1 @@
+//creamos un slice para obtener los posts
